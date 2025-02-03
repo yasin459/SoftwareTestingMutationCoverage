@@ -1,0 +1,15 @@
+#c5
+#3 inputs
+#1 outputs
+#0 inverters
+#2 gates ( 1 ANDs 1 NANDs )
+
+INPUT(1)
+INPUT(2)
+INPUT(4)
+
+OUTPUT(5)
+
+3 = NAND(1, 2)
+5 = AND(3, 4)
+
