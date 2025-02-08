@@ -18,6 +18,19 @@ class TestCircuitSimulator(unittest.TestCase):
 
         os.remove(output_file)
 
+    def run_bench_test(self, bench_file_out, input_wire_in, expected_output_file, output_file):
+        phaseOne.run_bench(bench_file_out, input_wire_in, output_file)
+
+        with open(expected_output_file, "r") as f:
+            expected_bench = f.read()
+
+        with open(output_file, "r") as f:
+            actual_bench = f.read()
+
+        self.assertEqual(actual_bench.strip(), expected_bench.strip())
+
+        os.remove(output_file)
+
     def test_check_all_number(self):
         self.assertTrue(phaseOne.check_all_number("123 456 789"))
         self.assertFalse(phaseOne.check_all_number("123 ABC 789"))
@@ -132,39 +145,22 @@ class TestCircuitSimulator(unittest.TestCase):
         bench_file_out = "./testFiles/c5.bench"
         input_wire_in = "./testFiles/c5.pi"
         expected_output_file = "./testFiles/c5.log"
-
         output_file = "c5.log"
-
-        phaseOne.run_bench(bench_file_out, input_wire_in, output_file)
-
-        with open(expected_output_file, "r") as f:
-            expected_bench = f.read()
-
-        with open(output_file, "r") as f:
-            actual_bench = f.read()
-
-        self.assertEqual(actual_bench.strip(), expected_bench.strip())
-
-        os.remove(output_file)
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
     def test_run_bench_c17(self):
         bench_file_out = "./testFiles/c17.bench"
         input_wire_in = "./testFiles/c17.pi"
         expected_output_file = "./testFiles/c17.log"
-
         output_file = "c17.log"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
-        phaseOne.run_bench(bench_file_out, input_wire_in, output_file)
-
-        with open(expected_output_file, "r") as f:
-            expected_bench = f.read()
-
-        with open(output_file, "r") as f:
-            actual_bench = f.read()
-
-        self.assertEqual(actual_bench.strip(), expected_bench.strip())
-
-        os.remove(output_file)
+    def test_run_bench_zSmall(self):
+        bench_file_out = "./testFiles/zSmall"
+        input_wire_in = "./testFiles/zSmallData"
+        expected_output_file = "./testFiles/zSmallLog"
+        output_file = "zSmallLog"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
 
 if __name__ == "__main__":
