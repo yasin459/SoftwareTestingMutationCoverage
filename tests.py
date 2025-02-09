@@ -163,6 +163,14 @@ class TestCircuitSimulator(unittest.TestCase):
         output_file = "zSmallLog"
         self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
+    def test_run_bench_c1355(self):
+        self.maxDiff = None
+        bench_file_out = "./testFiles/c1355.bench"
+        input_wire_in = "./testFiles/c1355.pi"
+        expected_output_file = "./testFiles/c1355.log"
+        output_file = "c1355.log"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
+
 
 if __name__ == "__main__":
     unittest.main()
