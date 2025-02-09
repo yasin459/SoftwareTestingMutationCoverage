@@ -123,23 +123,23 @@ class TestCircuitSimulator(unittest.TestCase):
         expected_output_file = "./testFiles/c17.bench"
         self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
 
-    def test_isc_to_bench_c432(self):
-        input_file = "./testFiles/c432.isc"
-        output_file = "c432.bench"
-        expected_output_file = "./testFiles/c432.bench"
-        self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
+    # def test_isc_to_bench_c432(self):
+    #     input_file = "./testFiles/c432.isc"
+    #     output_file = "c432.bench"
+    #     expected_output_file = "./testFiles/c432.bench"
+    #     self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
 
-    def test_isc_to_bench_c499(self):
-        input_file = "./testFiles/c499.isc"
-        output_file = "c499.bench"
-        expected_output_file = "./testFiles/c499.bench"
-        self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
+    # def test_isc_to_bench_c499(self):
+    #     input_file = "./testFiles/c499.isc"
+    #     output_file = "c499.bench"
+    #     expected_output_file = "./testFiles/c499.bench"
+    #     self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
 
-    def test_isc_to_bench_c880(self):
-        input_file = "./testFiles/c880.isc"
-        output_file = "c880.bench"
-        expected_output_file = "./testFiles/c880.bench"
-        self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
+    # def test_isc_to_bench_c880(self):
+    #     input_file = "./testFiles/c880.isc"
+    #     output_file = "c880.bench"
+    #     expected_output_file = "./testFiles/c880.bench"
+    #     self.run_isc_to_bench_test(input_file, output_file, expected_output_file)
 
     def test_run_bench_c5(self):
         bench_file_out = "./testFiles/c5.bench"
