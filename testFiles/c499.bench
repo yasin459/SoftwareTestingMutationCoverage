@@ -2,7 +2,7 @@
 #41 inputs
 #32 outputs
 #40 inverters
-#162 gates ( 56 ANDs + 40 NANDs + 2 ORs + 104 XORs )
+#202 gates ( 56 ANDs 2 ORs 104 XORs 40 NOTs )
 
 INPUT(1)
 INPUT(5)
