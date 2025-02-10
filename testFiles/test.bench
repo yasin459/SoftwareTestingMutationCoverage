@@ -1,0 +1,15 @@
+#test
+#3 inputs
+#1 outputs
+#0 inverters
+#1 gates ( 1 NORs )
+
+# OUTPUT
+
+INPUT(1)
+INPUT(2)
+INPUT(3)
+
+OUTPUT(4)
+
+4 = NOR(1, 2, 3)

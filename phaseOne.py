@@ -225,7 +225,7 @@ def run_bench(input_bench, input_data, output_file):
                 wire_counter_right(wires, fanout_check)
                 tmp_val = my_or(wire_value[wires[0]], wire_value[wires[1]])
                 for i in range(2, len(wires)):
-                    tmp_val = my_or(tmp, wire_value[wires[i]])
+                    tmp_val = my_or(tmp_val, wire_value[wires[i]])
                 tmp_val = my_not(tmp_val)
                 wire_value[tmp[0]] = tmp_val
             elif tmp[1].__contains__("OR"):

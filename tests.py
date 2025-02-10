@@ -29,7 +29,7 @@ class TestCircuitSimulator(unittest.TestCase):
 
         self.assertEqual(actual_bench.strip(), expected_bench.strip())
 
-        os.remove(output_file)
+        # os.remove(output_file)
 
     def test_check_all_number(self):
         self.assertTrue(phaseOne.check_all_number("123 456 789"))
@@ -171,6 +171,29 @@ class TestCircuitSimulator(unittest.TestCase):
         output_file = "c1355.log"
         self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
+    def test_run_bench_c432(self):
+        self.maxDiff = None
+        bench_file_out = "./testFiles/c432.bench"
+        input_wire_in = "./testFiles/c432.pi"
+        expected_output_file = "./testFiles/c432.log"
+        output_file = "c432.log"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
+
+    def test_run_bench_nor(self):
+        self.maxDiff = None
+        bench_file_out = "./testFiles/nor.bench"
+        input_wire_in = "./testFiles/nor.pi"
+        expected_output_file = "./testFiles/nor.log"
+        output_file = "nor.log"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
+
+    def test_run_bench_test(self):
+        self.maxDiff = None
+        bench_file_out = "./testFiles/test.bench"
+        input_wire_in = "./testFiles/nor.pi"
+        expected_output_file = "./testFiles/nor.log"
+        output_file = "nor.log"
+        self.run_bench_test(bench_file_out, input_wire_in, expected_output_file, output_file)
 
 if __name__ == "__main__":
     unittest.main()
